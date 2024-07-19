@@ -1,0 +1,191 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e5e5f7;
+    background-image: radial-gradient(#444cf7 0.55px, #e5e5f7 0.55px);
+    background-size: 11px 11px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 90%;
+    box-sizing: border-box;
+}
+.bingo-board {
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.bingo-header {
+    color: #333;
+    font-size: 8em;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.round-display {
+    color: #333;
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.bingo-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.bingo-table td, .bingo-table th {
+    border: 1px solid #000;
+    padding: 30px;
+    text-align: center;
+    font-size: 3em;
+    cursor: pointer;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.bingo-table td {
+    width: calc(100% / 15);
+    height: 100px;
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s;
+}
+.bingo-table th {
+    font-size: 3.5em;
+    color: #fff;
+    font-weight: bold;
+}
+.bingo-table th.B {
+    background-color: #ff4d4d;
+}
+.bingo-table th.I {
+    background-color: #4d79ff;
+}
+.bingo-table th.N {
+    background-color: #4dff88;
+}
+.bingo-table th.G {
+    background-color: #ffbb33;
+}
+.bingo-table th.O {
+    background-color: #b366ff;
+}
+.bingo-table td.taken.B {
+    background-color: #ff4d4d;
+    color: #fff;
+}
+.bingo-table td.taken.I {
+    background-color: #4d79ff;
+    color: #fff;
+}
+.bingo-table td.taken.N {
+    background-color: #4dff88;
+    color: #fff;
+}
+.bingo-table td.taken.G {
+    background-color: #ffbb33;
+    color: #fff;
+}
+.bingo-table td.taken.O {
+    background-color: #b366ff;
+    color: #fff;
+}
+.info-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.last-number-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.last-number-label {
+    font-size: 3em;
+    font-weight: bold;
+    color: #333;
+}
+.last-number {
+    background-color: transparent;
+    color: #333;
+    padding: 20px 40px;
+    font-size: 3.5em;
+    border-radius: 10px;
+    border: 2px solid #333;
+    width: 300px;
+    text-align: center;
+    font-weight: bold;
+}
+.controls-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+.round-counter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.round-counter button {
+    background-color: #4d79ff;
+    color: #fff;
+    font-size: 2em;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.round-counter button:hover {
+    background-color: #6a9cff;
+}
+.round-counter span {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+.round-type {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 2em;
+}
+.round-type select {
+    font-size: 1em;
+    padding: 5px;
+}
+.reset-button {
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+.reset-button:hover {
+    background-color: #ff6666;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Bingo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="bingo-board">
+            <div class="bingo-header">BINGO</div>
+            <div class="round-display" id="round-display">Rodada 1</div>
+            <table class="bingo-table">
+                <!-- Rows for numbers 1 to 75 -->
+                <!-- The rows will be dynamically created by JavaScript -->
+            </table>
+        </div>
+        <div class="info-panel">
+            <div class="last-number-container">
+                <div class="last-number-label">Último número</div>
+                <div class="last-number" id="last-number">-</div>
+            </div>
+        </div>
+        <div class="controls-container">
+            <div class="round-counter">
+                <button id="decrease-round">-</button>
+                <span id="round-number">1</span>
+                <button id="increase-round">+</button>
+            </div>
+            <div class="round-type">
+                <label for="round-type-select">Tipo de Rodada:</label>
+                <select id="round-type-select">
+                    <option value="Normal">Normal</option>
+                    <option value="Bônus">Bônus</option>
+                    <option value="Extra">Extra</option>
+                    <option value="Cortesia">Cortesia</option>
+                </select>
+            </div>
+            <button class="reset-button" id="reset-button">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
