@@ -8,6 +8,7 @@ body {
     background-color: #e5e5f7;
     background-image: radial-gradient(#444cf7 0.55px, #e5e5f7 0.55px);
     background-size: 11px 11px;
+    position: relative;
 }
 .container {
     display: flex;
@@ -18,9 +19,9 @@ body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
     max-width: 90%;
     box-sizing: border-box;
+    position: relative; /* To ensure the watermark is positioned relative to the container */
 }
 .bingo-board {
     background-color: #fff;
@@ -188,4 +189,15 @@ body {
 }
 .reset-button:hover {
     background-color: #ff6666;
+}
+.watermark {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.5);
+    transform: rotate(0deg);
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;
 }
